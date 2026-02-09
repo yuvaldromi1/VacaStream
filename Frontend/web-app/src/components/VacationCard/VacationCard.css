@@ -1,0 +1,131 @@
+.VacationCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.VacationCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Like button */
+.like-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.92);
+    border: none;
+    border-radius: 20px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.like-btn:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.like-btn.liked {
+    background: rgba(255, 240, 240, 0.95);
+    color: #e74c3c;
+}
+
+.heart-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.like-count {
+    line-height: 1;
+}
+
+/* Image section */
+.card-image {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-image.no-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.image-preloader {
+    display: none;
+}
+
+.destination-name {
+    width: 100%;
+    margin: 0;
+    padding: 30px 14px 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Content section */
+.card-content {
+    padding: 12px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    color: #666;
+}
+
+.calendar-icon {
+    font-size: 0.95rem;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.price-tag {
+    align-self: stretch;
+    text-align: center;
+    background: #00bcd4;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}

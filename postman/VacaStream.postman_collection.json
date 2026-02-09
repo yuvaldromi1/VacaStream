@@ -1,0 +1,547 @@
+{
+  "info": {
+    "_postman_id": "77afa108-a911-4ec1-913a-bad3ebef72e1",
+    "name": "VataStream",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47300811",
+    "_collection_link": "https://go.postman.co/collection/47300811-77afa108-a911-4ec1-913a-bad3ebef72e1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "if (response.success) {\r",
+                  "    pm.collectionVariables.set(\"token\", response.data.token);\r",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"zohar\",\r\n    \"lastName\": \"Dromi\",\r\n    \"email\": \"zohar@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "if (response.success) {\r",
+                  "    pm.collectionVariables.set(\"token\", response.data.token);\r",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"yuval@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vacation",
+      "item": [
+        {
+          "name": "Get All Vacations",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/vacations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "vacations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Vacation",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/vacations/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "vacations",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Post New Vacation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "destination",
+                  "value": "goa, india",
+                  "type": "text",
+                  "uuid": "811079b1-07b4-4faf-9a7a-70296a6347b7"
+                },
+                {
+                  "key": "description",
+                  "value": "Lush tropical beaches, vibrant night markets, ancient Portuguese churches, and spice plantations nestled in India's smallest state.\n",
+                  "type": "text",
+                  "uuid": "304b729e-380c-40a0-b350-c28f10fe8372"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-3-05",
+                  "type": "text",
+                  "uuid": "dd65f801-8155-45ba-84cb-8da8d43d30bb"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-4-14",
+                  "type": "text",
+                  "uuid": "5d9228fd-1e16-4b29-97f1-9bcc30d7617d"
+                },
+                {
+                  "key": "price",
+                  "value": "7999",
+                  "type": "text",
+                  "uuid": "da375662-e8b4-46f5-8963-c73ce8f8073c"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "5ba9191a-00d4-4a47-8a4c-f7ae40b6418c",
+                  "src": "/C:/Users/ido1d/OneDrive/שולחן העבודה/full stuck web course/תיק עבודות/VacaStream/Backend/Vacation/src/uploads/goa, india.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/vacations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "vacations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Vacation",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "destination",
+                  "value": "goa, india",
+                  "type": "text"
+                },
+                {
+                  "key": "description\t",
+                  "value": "Lush tropical beaches, vibrant night markets, ancient Portuguese churches, and spice plantations nestled in India's smallest state.",
+                  "type": "text"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-03-05",
+                  "type": "text"
+                },
+                {
+                  "key": "endDate\t",
+                  "value": "2026-04-14",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "8000",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "42eb5db9-d94b-4ea0-b0a4-1d37aa2f6ec2",
+                  "src": "/C:/Users/ido1d/OneDrive/שולחן העבודה/full stuck web course/תיק עבודות/VacaStream/Backend/Vacation/src/uploads/goa, india.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/vacations/14",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "vacations",
+                "14"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Vacation",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/vacations/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "vacations",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Post Likes",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/likes/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "likes",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Likes",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/likes/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "likes",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reports",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/reports",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "reports"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reports Csv",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/reports/csv",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "reports",
+                "csv"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJ1c2VyIiwiZmlyc3ROYW1lIjoiWXV2YWwiLCJsYXN0TmFtZSI6IkRyb21pIiwiaWF0IjoxNzcwNTY2ODEyLCJleHAiOjE3NzA1ODEyMTJ9.mURH59ANAefVBvDUjWjnZvSTkCE_q1ft5yPcYzRfg2M"
+    }
+  ]
+}

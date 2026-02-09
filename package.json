@@ -1,0 +1,14 @@
+{
+    "name": "vacastream",
+    "version": "1.0.0",
+    "description": "Vacation streaming service",
+    "private": true,
+    "scripts": {
+        "dev": "pnpm -r --parallel --if-present run dev",
+        "build": "pnpm -r run build",
+        "start": "pnpm --filter \"@yd/*\" -r run build && pnpm -r --parallel --if-present run start"
+    },
+    "author": "Yuval Dromi",
+    "license": "ISC",
+    "packageManager": "pnpm@10.28.0"
+}

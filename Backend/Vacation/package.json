@@ -1,0 +1,29 @@
+{
+    "name": "@yd/vacation",
+    "version": "1.0.0",
+    "description": "Vacations Microservice",
+    "scripts": {
+        "build": "tsc",
+        "start": "nodemon --exec ts-node src/app.ts --quiet"
+    },
+    "author": "Yuval Dromi",
+    "packageManager": "pnpm@10.28.0",
+    "dependencies": {
+        "express": "catalog:backend",
+        "mysql2": "catalog:backend",
+        "multer": "catalog:backend",
+        "uuid": "catalog:backend",
+        "csv-stringify": "catalog:backend",
+        "dotenv": "catalog:backend",
+        "@yd/restify": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/express": "catalog:backend",
+        "@types/multer": "catalog:backend",
+        "@types/uuid": "catalog:backend",
+        "@types/node": "catalog:backend",
+        "typescript": "catalog:backend",
+        "ts-node": "catalog:backend",
+        "nodemon": "catalog:backend"
+    }
+}

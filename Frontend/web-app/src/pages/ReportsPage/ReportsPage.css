@@ -1,0 +1,62 @@
+.ReportsPage {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.report-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.csv-btn {
+    padding: 10px 22px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.csv-btn:hover {
+    background: #388e3c;
+}
+
+.chart-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px 16px 16px;
+}
+
+.chart-title {
+    text-align: center;
+    margin: 0 0 8px;
+    color: #e91e8c;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.no-data {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #888;
+    margin: 60px 0;
+}
+
+.report-error {
+    text-align: center;
+    color: #c62828;
+    font-size: 1.1rem;
+    margin: 60px 0;
+}

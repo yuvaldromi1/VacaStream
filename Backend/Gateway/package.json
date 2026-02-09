@@ -1,0 +1,28 @@
+{
+    "name": "@yd/gateway",
+    "version": "1.0.0",
+    "description": "API Gateway Microservice",
+    "scripts": {
+        "build": "tsc",
+        "start": "nodemon --exec ts-node src/app.ts --quiet"
+    },
+    "author": "Yuval Dromi",
+    "packageManager": "pnpm@10.28.0",
+    "dependencies": {
+        "express": "catalog:backend",
+        "cors": "catalog:backend",
+        "helmet": "catalog:backend",
+        "express-rate-limit": "catalog:backend",
+        "http-proxy-middleware": "catalog:backend",
+        "dotenv": "catalog:backend",
+        "@yd/jwt": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/express": "catalog:backend",
+        "@types/cors": "catalog:backend",
+        "@types/node": "catalog:backend",
+        "typescript": "catalog:backend",
+        "ts-node": "catalog:backend",
+        "nodemon": "catalog:backend"
+    }
+}

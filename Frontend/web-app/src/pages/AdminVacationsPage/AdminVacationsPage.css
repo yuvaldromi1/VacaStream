@@ -1,0 +1,209 @@
+.AdminVacationsPage {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.admin-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.add-btn {
+    padding: 10px 24px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-btn:hover {
+    background: #0097a7;
+}
+
+/* Admin Grid */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 960px) {
+    .admin-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Admin Card */
+.AdminCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.AdminCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.admin-card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    display: flex;
+    align-items: flex-end;
+}
+
+.admin-destination {
+    width: 100%;
+    margin: 0;
+    padding: 24px 14px 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.admin-card-content {
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.admin-date-range {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.admin-description {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.admin-price {
+    text-align: center;
+    background: #00bcd4;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.edit-btn {
+    background: #ff9800;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.85;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #888;
+    margin: 60px 0;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 32px;
+    padding-bottom: 24px;
+}
+
+.page-btn {
+    min-width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+}
+
+.page-btn:hover:not(:disabled):not(.active) {
+    background: #e0f7fa;
+    border-color: #00bcd4;
+}
+
+.page-btn.active {
+    background: #00bcd4;
+    color: #fff;
+    border-color: #00bcd4;
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.nav-btn {
+    font-size: 1.2rem;
+}

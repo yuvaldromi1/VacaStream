@@ -1,0 +1,93 @@
+.LoginPage,
+.RegisterPage {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.AuthForm {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.AuthForm h2 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+
+.AuthForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.AuthForm input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.AuthForm input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+}
+
+.AuthForm button[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.AuthForm button[type="submit"]:hover {
+    background-color: #1565c0;
+}
+
+.AuthForm button[type="submit"]:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+}
+
+.ErrorMessage {
+    background-color: #fdecea;
+    color: #c62828;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid #f5c6cb;
+}
+
+.AuthLink {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.AuthLink a {
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.AuthLink a:hover {
+    text-decoration: underline;
+}

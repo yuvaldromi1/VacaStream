@@ -1,0 +1,69 @@
+.Header {
+    background-color: #1976d2;
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.HeaderContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.Logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.Nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Nav a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.Nav a:hover,
+.Nav a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.UserSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.Welcome {
+    font-size: 0.9rem;
+}
+
+.LogoutBtn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.LogoutBtn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

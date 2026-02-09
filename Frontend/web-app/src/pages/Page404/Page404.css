@@ -1,0 +1,13 @@
+.Page404 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.Page404 h2 {
+    font-size: 4rem;
+    color: #ccc;
+}
+
+.Page404 a {
+    color: #1976d2;
+}
