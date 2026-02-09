@@ -12,11 +12,12 @@ class App {
             const server = express();
 
             // Helmet middleware for security headers:
+            const gatewayOrigin = appConfig.port === 3000 ? "http://localhost:3000" : "*";
             server.use(helmet({
                 contentSecurityPolicy: {
                     directives: {
                         defaultSrc: ["'self'"],
-                        imgSrc: ["'self'", "data:", "http://localhost:3000"],
+                        imgSrc: ["'self'", "data:", gatewayOrigin],
                         styleSrc: ["'self'", "https:", "'unsafe-inline'"],
                     },
                 },
